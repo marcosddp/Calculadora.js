@@ -13,7 +13,7 @@ let operator = null;
 off.addEventListener("click", (event) => {
   screen.innerHTML = "";
   setTimeout(function () {
-    window.location.replace("http://stackoverflow.com");
+    window.location.replace("https://github.com/marcosddp/Calculadora.js");
   }, 525);
 });
 
@@ -60,8 +60,9 @@ numbers.forEach((num) => {
 });
 
 point.addEventListener("click", (event) => {
-  if (!newValue.includes(".")) {
+  if (newValue.toString().indexOf(".")==-1) {
     newValue += ".";
+    screen.innerHTML = newValue;
   }
 });
 
